@@ -3,42 +3,42 @@ const lessonsData = [
     {
         title: "Chủ đề 1",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a666192862e7d395b31437/start?preview=true",
         level: 1,
         icon: "💡"
     },
     {
         title: "Chủ đề 2",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a5ab48166b91dce189b44c/start?from=admin&preview=true",
         level: 1,
         icon: "💡"
     },
     {
         title: "Chủ đề 3",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a5ad461e3967ac09d111c3/start?from=admin&preview=true",
         level: 1,
         icon: "💡"
     },
     {
         title: "Chủ đề 4",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a5b7e4cd20db6b47756bcd/start?preview=true",
         level: 1,
         icon: "💡"
     },
     {
         title: "Chủ đề 5",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a6463aa4d08de0f68df02b/start?from=admin&preview=true",
         level: 1,
         icon: "💡"
     },
     {
         title: "Chủ đề 6",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a665ab2b1fedb9dee23387/start?from=admin&preview=true",
         level: 1,
         icon: "💡"
     },
@@ -46,42 +46,56 @@ const lessonsData = [
     {
         title: "Chủ đề 1",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/699c63dc9058bf7d27811eaf/start?preview=true",
         level: 2,
         icon: "🚀"
     },
     {
         title: "Chủ đề 2",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a0057bc9321eaa2825e8ee/start?preview=true",
         level: 2,
         icon: "🚀"
     },
     {
         title: "Chủ đề 3",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/699cf78970669402d79ca2ab/start?from=admin&preview=true",
         level: 2,
         icon: "🚀"
     },
     {
-        title: "Chủ đề 4",
+        title: "Chủ đề 4 Part 1",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69b8cd44b64783e7ac7791a5/start?preview=true",
+        level: 2,
+        icon: "🚀"
+    },
+    {
+        title: "Chủ đề 4 Part 2",
+        description: "Start Playing - Wayground (Formerly Quizizz)",
+        url: "https://wayground.com/join/quiz/69b966fde942e5dcfec63a98/start?from=admin&preview=true",
         level: 2,
         icon: "🚀"
     },
     {
         title: "Chủ đề 5",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69af881039fbcff4f38647bb/start?from=admin&preview=true",
         level: 2,
         icon: "🚀"
     },
     {
         title: "Chủ đề 6",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69b975e6546575919f8be1a5/start?from=admin&preview=true",
+        level: 2,
+        icon: "🚀"
+    },
+    {
+        title: "Chủ đề 7",
+        description: "Start Playing - Wayground (Formerly Quizizz)",
+        url: "https://wayground.com/join/quiz/699c666b7699644c83fba5de/start?from=admin&preview=true",
         level: 2,
         icon: "🚀"
     },
@@ -89,42 +103,49 @@ const lessonsData = [
     {
         title: "Chủ đề 1",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69cfb160dcf075db42f5a4b7/start?from=admin&preview=true",
         level: 3,
         icon: "🌟"
     },
     {
         title: "Chủ đề 2",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69a906522a224d430cba8852/start?preview=true",
         level: 3,
         icon: "🌟"
     },
     {
         title: "Chủ đề 3",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69b22da0cc40041db1e2a1e4/start?preview=true",
         level: 3,
         icon: "🌟"
     },
     {
         title: "Chủ đề 4",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/6983fdbeb98788693ef466cb/start?preview=true",
         level: 3,
         icon: "🌟"
     },
     {
         title: "Chủ đề 5",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69b977f2a019ee714d0dafc6/start?from=admin&preview=true",
         level: 3,
         icon: "🌟"
     },
     {
         title: "Chủ đề 6",
         description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/",
+        url: "https://wayground.com/join/quiz/69b97be280a23b7c5711654a/start?from=admin&preview=true",
+        level: 3,
+        icon: "🌟"
+    },
+    {
+        title: "Chủ đề 7",
+        description: "Start Playing - Wayground (Formerly Quizizz)",
+        url: "https://wayground.com/join/quiz/69bb683c834492a5a289105e/start?from=admin&preview=true",
         level: 3,
         icon: "🌟"
     }
