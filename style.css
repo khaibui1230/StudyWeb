@@ -1,0 +1,339 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: linear-gradient(to right bottom, #e0f7fa, #e8f5e9); /* Subtle gradient background */
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 2.5rem 1rem; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+    margin-bottom: 2.5rem; /* Increased margin */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+header h1 {
+    color: #2c3e50; /* Darker, more prominent color */
+    margin-bottom: 0.75rem; /* Adjusted margin */
+    font-size: 3rem; /* Larger font size */
+    font-weight: 700; /* Bolder font */
+}
+
+header p {
+    color: #7f8c8d; /* Slightly darker grey */
+    font-size: 1.2rem; /* Slightly larger font size */
+    max-width: 600px;
+    margin: 0.75rem auto 0;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Increased padding */
+}
+
+.level-section {
+    background-color: #ffffff;
+    margin-bottom: 1.5rem; /* Adjusted margin */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Important for max-height transition */
+    transition: box-shadow 0.3s ease-in-out; /* Removed transform from here */
+}
+
+.level-section:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.level-header {
+    padding: 2rem 2.5rem; /* Padding for header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #f8f8f8; /* Slightly different background for header */
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.3s ease;
+}
+
+.level-section.active .level-header {
+    background-color: #e0f7fa; /* Highlight active header */
+}
+
+.level-header:hover {
+    background-color: #f0f0f0;
+}
+
+.level-header h2 {
+    text-align: left; /* Align text left */
+    margin: 0; /* Remove margin */
+    font-size: 2.2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0; /* Remove padding-bottom */
+}
+
+.level-header h2::after {
+    display: none; /* Hide the underline for dropdown headers */
+}
+
+.accordion-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #34495e;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.accordion-icon::after {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.accordion-icon.active::after {
+    transform: translateX(-50%) rotate(90deg); /* Rotate to make it a minus sign */
+}
+
+.level-content {
+    max-height: 0; /* Initially hidden */
+    overflow: hidden;
+    transition: max-height 0.5s ease-out; /* Smooth transition for opening/closing */
+    padding: 0 2.5rem; /* Apply horizontal padding here */
+}
+
+.level-section.active .level-content {
+    padding-top: 2rem; /* Add top padding when open */
+    padding-bottom: 2.5rem; /* Add bottom padding when open */
+}
+
+/* Specific colors for each level */
+#level-3 .level-header {
+    border-left: 8px solid #64b5f6;
+}
+#level-3 .level-header h2 {
+    color: #2196f3;
+}
+
+#level-4 .level-header {
+    border-left: 8px solid #81c784;
+}
+#level-4 .level-header h2 {
+    color: #4caf50;
+}
+
+#level-5 .level-header {
+    border-left: 8px solid #ffb74d;
+}
+#level-5 .level-header h2 {
+    color: #ff9800;
+}
+
+.lesson-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Slightly larger min-width */
+    gap: 2rem; /* Increased gap */
+}
+
+.lesson-card {
+    background-color: #fdfdfd;
+    border: none; /* Removed border */
+    border-radius: 12px; /* Larger border-radius */
+    padding: 1.8rem; /* Increased padding */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Ensures content stays within rounded corners */
+}
+
+.lesson-card:hover {
+    transform: translateY(-5px) scale(1.02); /* More pronounced lift and slight scale */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.lesson-card h3 {
+    margin-top: 0;
+    color: #34495e; /* Darker title color */
+    font-size: 1.5rem; /* Larger font size */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Increased gap for icon */
+    margin-bottom: 1rem;
+}
+
+.lesson-card p {
+    color: #7f8c8d; /* Consistent description color */
+    font-size: 1rem; /* Slightly larger font size */
+    flex-grow: 1;
+    margin-bottom: 1.5rem; /* Increased margin */
+}
+
+.lesson-card button {
+    background-color: #3498db; /* Brighter blue */
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem; /* Increased padding */
+    border-radius: 10px; /* Larger border-radius */
+    cursor: pointer;
+    font-size: 1.1rem; /* Larger font size */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* Shadow for button */
+}
+
+.lesson-card button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+    box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4); /* Enhanced shadow on hover */
+}
+
+.lesson-card button:active {
+    transform: scale(0.97); /* More pronounced click animation */
+    box-shadow: 0 2px 5px rgba(52, 152, 219, 0.2); /* Smaller shadow on active */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    main {
+        padding: 0 1.2rem;
+    }
+    .lesson-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem; /* Slightly reduced padding */
+        margin-bottom: 1.5rem;
+    }
+    header h1 {
+        font-size: 2.2rem; /* Adjusted font size */
+    }
+    header p {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 0 0.8rem; /* Reduced main padding */
+    }
+
+    .level-section {
+        margin-bottom: 1rem; /* Reduced margin */
+    }
+
+    .level-header {
+        padding: 1.5rem 1.5rem; /* Adjusted header padding */
+    }
+
+    .level-header h2 {
+        font-size: 1.8rem; /* Adjusted font size */
+    }
+
+    .level-section.active .level-content {
+        padding-top: 1.5rem; /* Adjusted padding */
+        padding-bottom: 1.5rem; /* Adjusted padding */
+    }
+
+    .lesson-container {
+        grid-template-columns: 1fr; /* Single column for tablets in portrait and smaller screens */
+        gap: 1rem; /* Reduced gap */
+    }
+
+    .lesson-card {
+        padding: 1.2rem; /* Adjusted padding */
+    }
+
+    .lesson-card h3 {
+        font-size: 1.3rem; /* Adjusted font size */
+        gap: 0.5rem;
+    }
+
+    .lesson-card p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .lesson-card button {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 0.5rem; /* Further reduced padding */
+    }
+
+    header h1 {
+        font-size: 1.8rem; /* Further reduced font size */
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .level-section {
+        margin-bottom: 0.8rem; /* Further reduced margin */
+    }
+
+    .level-header {
+        padding: 1.2rem 1rem; /* Further adjusted header padding */
+    }
+
+    .level-header h2 {
+        font-size: 1.5rem; /* Further adjusted font size */
+    }
+
+    .level-section.active .level-content {
+        padding-top: 1rem; /* Further adjusted padding */
+        padding-bottom: 1rem; /* Further adjusted padding */
+    }
+
+    .lesson-card {
+        padding: 1rem; /* Further adjusted padding */
+    }
+
+    .lesson-card h3 {
+        font-size: 1.2rem; /* Further adjusted font size */
+    }
+
+    .lesson-card p {
+        font-size: 0.85rem;
+    }
+
+    .lesson-card button {
+        padding: 0.7rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
