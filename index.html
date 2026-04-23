@@ -4,52 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground Học Tập</title>
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Playground Học Tập</h1>
-        <p>Chọn cấp độ phù hợp để bắt đầu</p>
-    </header>
 
-    <main>
+<header class="header">
+    <div class="theme-toggle-container">
+        <button id="theme-toggle" class="theme-toggle-btn" title="Chuyển đổi chế độ tối/sáng">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+    </div>
+    <div class="header-content">
+        <h1>🚀 Playground Học Tập</h1>
+        <p>Học tập thông minh, vui chơi sáng tạo</p>
+        <div class="teacher-info">
+            <span>👨‍🏫 Giáo viên: <strong>Bùi Quang Khải</strong></span>
+            <span>📧 Email: khaibui0402@gmail.com</span>
+        </div>
+    </div>
+</header>
+
+<nav class="category-tabs">
+    <div class="tabs-container">
+        <button class="tab-btn active" data-target="tieu-hoc">Tiểu học</button>
+        <button class="tab-btn" data-target="thcs">THCS</button>
+        <button class="tab-btn" data-target="thpt">THPT</button>
+    </div>
+</nav>
+
+<main class="container">
+    <!-- Khu vực Tiểu học -->
+    <div id="tieu-hoc" class="category-content active">
         <section id="level-3" class="level-section">
             <div class="level-header">
-                <h2>Khối 3 – Spark Level 1</h2>
+                <h2>🎯 Khối 3 – Spark Level 1</h2>
                 <span class="accordion-icon"></span>
             </div>
             <div class="level-content">
-                <div class="lesson-container">
-                    <!-- Lessons will be rendered here by JavaScript -->
-                </div>
+                <div class="lesson-container"></div>
             </div>
         </section>
 
         <section id="level-4" class="level-section">
             <div class="level-header">
-                <h2>Khối 4 – Spark Level 2</h2>
+                <h2>🔥 Khối 4 – Spark Level 2</h2>
                 <span class="accordion-icon"></span>
             </div>
             <div class="level-content">
-                <div class="lesson-container">
-                    <!-- Lessons will be rendered here by JavaScript -->
-                </div>
+                <div class="lesson-container"></div>
             </div>
         </section>
 
         <section id="level-5" class="level-section">
             <div class="level-header">
-                <h2>Khối 5 – Spark Level 3</h2>
+                <h2>💎 Khối 5 – Spark Level 3</h2>
                 <span class="accordion-icon"></span>
             </div>
             <div class="level-content">
-                <div class="lesson-container">
-                    <!-- Lessons will be rendered here by JavaScript -->
-                </div>
+                <div class="lesson-container"></div>
             </div>
         </section>
-    </main>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Khu vực THCS -->
+    <div id="thcs" class="category-content">
+        <section id="thcs-6" class="level-section">
+            <div class="level-header">
+                <h2>📚 Khối 6 - Junior 1</h2>
+                <span class="accordion-icon"></span>
+            </div>
+            <div class="level-content">
+                <div class="lesson-container"></div>
+            </div>
+        </section>
+
+        <section id="thcs-7" class="level-section">
+            <div class="level-header">
+                <h2>📚 Khối 7 - Junior 2</h2>
+                <span class="accordion-icon"></span>
+            </div>
+            <div class="level-content">
+                <div class="lesson-container"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Khu vực THPT -->
+    <div id="thpt" class="category-content">
+        <div class="empty-state">
+            <img src="https://cdn-icons-png.flaticon.com/512/7486/7486744.png" alt="Coming soon" width="100">
+            <h3>Đang cập nhật nội dung THPT</h3>
+            <p>Các bài học chuyên sâu dành cho cấp 3 đang được chuẩn bị!</p>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Thông tin giáo viên</h4>
+            <p>👨‍🏫 Giáo viên phụ trách: <strong>Bùi Quang Khải</strong></p>
+            <p>🏫 <strong>Mindx Technology School</strong></p>
+            <p>🏫 <strong>Trung Tâm tinh học An Quốc Việt</strong></p>
+        </div>
+        <div class="footer-section">
+            <h4>Liên hệ</h4>
+            <p>📱 Hotline: 033.992.5974</p>
+            <p>📧 Email: khaibui0402@gmail.com</p>
+            <p>🌐 Website: www.giaovien.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Playground Học Tập. Thiết kế bởi Giáo viên Bùi Quang Khải.</p>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
+
 </body>
 </html>

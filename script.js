@@ -148,23 +148,47 @@ const lessonsData = [
         url: "https://wayground.com/join/quiz/69bb683c834492a5a289105e/start?from=admin&preview=true",
         level: 3,
         icon: "🌟"
+    },
+    // THCS Sample
+    {
+        title: "Toán 6 - Số học",
+        description: "Ôn tập về số tự nhiên và các phép tính",
+        url: "#",
+        level: 6,
+        icon: "🔢"
+    },
+    {
+        title: "Tiếng Anh 6 - Unit 1",
+        description: "My New School - Vocabulary & Grammar",
+        url: "#",
+        level: 6,
+        icon: "🇬🇧"
     }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Render Lessons
     const renderLessons = () => {
         lessonsData.forEach(lesson => {
             const lessonCard = document.createElement('div');
             lessonCard.classList.add('lesson-card');
 
             const titleElement = document.createElement('h3');
-            titleElement.innerHTML = `${lesson.icon} ${lesson.title}`;
+            let classText = "";
+            if (lesson.level === 1) classText = "Lớp 3";
+            else if (lesson.level === 2) classText = "Lớp 4";
+            else if (lesson.level === 3) classText = "Lớp 5";
+            else if (lesson.level === 6) classText = "Lớp 6";
+            else if (lesson.level === 7) classText = "Lớp 7";
+            
+            titleElement.innerHTML = `${lesson.icon} ${classText} - ${lesson.title}`;
 
             const descriptionElement = document.createElement('p');
             descriptionElement.textContent = lesson.description;
 
             const startButton = document.createElement('button');
-            startButton.textContent = "Bắt đầu";
+            startButton.classList.add('start-btn');
+            startButton.textContent = "Bắt đầu học";
             startButton.onclick = () => {
                 window.open(lesson.url, '_blank');
             };
@@ -180,6 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetContainer = document.querySelector('#level-4 .lesson-container');
             } else if (lesson.level === 3) {
                 targetContainer = document.querySelector('#level-5 .lesson-container');
+            } else if (lesson.level === 6) {
+                targetContainer = document.querySelector('#thcs-6 .lesson-container');
+            } else if (lesson.level === 7) {
+                targetContainer = document.querySelector('#thcs-7 .lesson-container');
             }
 
             if (targetContainer) {
@@ -190,28 +218,50 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderLessons();
 
+    // 2. Tab Switching Logic
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const categoryContents = document.querySelectorAll('.category-content');
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-target');
+
+            // Update buttons
+            tabButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update contents
+            categoryContents.forEach(content => {
+                content.classList.remove('active');
+                if (content.id === targetId) {
+                    content.classList.add('active');
+                }
+            });
+        });
+    });
+
+    // 3. Accordion Logic
     const levelHeaders = document.querySelectorAll('.level-header');
 
     levelHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const parentSection = header.closest('.level-section');
             const content = parentSection.querySelector('.level-content');
-            const icon = header.querySelector('.accordion-icon');
 
-            // Close all other open sections
-            document.querySelectorAll('.level-section.active').forEach(openSection => {
+            // Close all other open sections in the SAME category
+            const currentCategory = parentSection.closest('.category-content');
+            currentCategory.querySelectorAll('.level-section.active').forEach(openSection => {
                 if (openSection !== parentSection) {
                     openSection.classList.remove('active');
                     openSection.querySelector('.level-content').style.maxHeight = null;
-                    openSection.querySelector('.accordion-icon').classList.remove('active');
                 }
             });
 
             // Toggle the clicked section
-            parentSection.classList.toggle('active');
-            icon.classList.toggle('active');
+            const isActive = parentSection.classList.toggle('active');
 
-            if (parentSection.classList.contains('active')) {
+            if (isActive) {
+                // Re-calculate height to be sure (especially for dynamic content)
                 content.style.maxHeight = content.scrollHeight + "px";
             } else {
                 content.style.maxHeight = null;
@@ -219,8 +269,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Open the first section by default
-    if (levelHeaders.length > 0) {
-        levelHeaders[0].click();
+    // 4. Night Mode Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
     }
+
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 });
