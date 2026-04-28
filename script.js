@@ -42,6 +42,13 @@ const lessonsData = [
         level: 1,
         icon: "💡"
     },
+    {
+        title: "Bài thi thử - Google Forms",
+        description: "Bài thi Thử- Google Forms Lv 1",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdyu8SxSx2zZ46N4Z83BqVPswHHaqu6Raf66PVerM_6ah__nQ/viewform",
+        level: 1,
+        icon: "💡"
+    },
     // Spark Level 2 (Khối 4)
     {
         title: "Chủ đề 1",
@@ -96,6 +103,13 @@ const lessonsData = [
         title: "Chủ đề 7",
         description: "Start Playing - Wayground (Formerly Quizizz)",
         url: "https://wayground.com/join/quiz/699c666b7699644c83fba5de/start?from=admin&preview=true",
+        level: 2,
+        icon: "🚀"
+    },
+    {
+        title: "Bài thi thử - Google Forms",
+        description: "Bài thi Thử- Google Forms Lv 2",
+        url: "https://docs.google.com/forms/d/e/1FAIpQLScORHQ9NTmTIg5J-KBqrfWP78ZGeK-wf8z23NJlAyw-SB7mZw/viewform",
         level: 2,
         icon: "🚀"
     },
