@@ -11,6 +11,7 @@ const lessonsData = [
     { title: "Chủ đề 6 - Test 1", description: "An Toàn Và Bảo Mật", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL1/GS6SparkL1-CD6-T1%20(Published)/index.html", password: "31025003", points: "100", level: 1, icon: "💡" },
     { title: "Chủ đề 6 - Test 2", description: "An Toàn Và Bảo Mật", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL1/GS6SparkL1-CD6-T2%20(Published)/index.html", password: "31025002", points: "100", level: 1, icon: "💡" },
     { title: "Chủ đề Mở Rộng", description: "Ôn tập tổng hợp", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL1/GS6SparkL1-CDMR%20(Published)/index.html", password: "31025001", points: "100", level: 1, icon: "💡" },
+    { title: "Bảo bối Spark 1", description: "Công cụ hỗ trợ học tập", url: "https://wayground.com/", level: 1, icon: "💎", type: "baoboi" },
 
     // Spark Level 2 (Khối 4)
     { title: "CD1 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/699c63dc9058bf7d27811eaf/start?preview=true", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD1-T1%20(Published)/index.html", password: "41025013", points: "100", level: 2, icon: "🚀" },
@@ -26,6 +27,7 @@ const lessonsData = [
     { title: "CD6 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD6-T1%20(Published)/index.html", password: "41025003", points: "100", level: 2, icon: "🚀" },
     { title: "CD7 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD7-T1%20(Published)/index.html", password: "41025002", points: "100", level: 2, icon: "🚀" },
     { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD7-T2%20(Published)/index.html", password: "41025001", points: "100", level: 2, icon: "🚀" },
+    { title: "Bảo bối Spark 2", description: "Công cụ hỗ trợ học tập", url: "https://wayground.com/", level: 2, icon: "💎", type: "baoboi" },
 
     // Spark Level 3 (Khối 5)
     { title: "CD1 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69cfb160dcf075db42f5a4b7/start?from=admin&preview=true", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD1-T1%20(Published)/index.html", password: "68759341", points: "100", level: 3, icon: "🌟" },
@@ -38,7 +40,8 @@ const lessonsData = [
     { title: "CD5 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD5-T2%20(Published)/index.html", password: "51025004", points: "100", level: 3, icon: "🌟" },
     { title: "CD6 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD6-T1%20(Published)/index.html", password: "51025003", points: "100", level: 3, icon: "🌟" },
     { title: "CD7 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD7-T1%20(Published)/index.html", password: "51025002", points: "100", level: 3, icon: "🌟" },
-    { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD7-T2%20(Published)/index.html", password: "51025001", points: "100", level: 3, icon: "🌟" }
+    { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD7-T2%20(Published)/index.html", password: "51025001", points: "100", level: 3, icon: "🌟" },
+    { title: "Bảo bối Spark 3", description: "Công cụ hỗ trợ học tập", url: "https://wayground.com/", level: 3, icon: "💎", type: "baoboi" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -74,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lessonsData.forEach(lesson => {
             const lessonCard = document.createElement('div');
             lessonCard.classList.add('lesson-card');
+            if (lesson.type === 'baoboi') lessonCard.classList.add('card-baoboi');
 
             const titleElement = document.createElement('h3');
             titleElement.innerHTML = `${lesson.icon} ${lesson.title}`;
@@ -81,40 +85,44 @@ document.addEventListener('DOMContentLoaded', () => {
             const descriptionElement = document.createElement('p');
             descriptionElement.textContent = lesson.description;
 
-            const infoRow = document.createElement('div');
-            infoRow.classList.add('info-row');
-            infoRow.innerHTML = `
-                <div class="password-box">
-                    <span>Mật khẩu:</span>
-                    <strong>${lesson.password}</strong>
-                    <button class="btn-copy-sm" onclick="copyToClipboard('${lesson.password}', this)" title="Copy Password">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
-                    </button>
-                </div>
-                <div class="points-box">
-                    <span>🎯 ${lesson.points} pts</span>
-                </div>
-            `;
+            lessonCard.appendChild(titleElement);
+            lessonCard.appendChild(descriptionElement);
+
+            if (lesson.type !== 'baoboi') {
+                const infoRow = document.createElement('div');
+                infoRow.classList.add('info-row');
+                infoRow.innerHTML = `
+                    <div class="password-box">
+                        <span>Mật khẩu:</span>
+                        <strong>${lesson.password}</strong>
+                        <button class="btn-copy-sm" onclick="copyToClipboard('${lesson.password}', this)" title="Copy Password">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        </button>
+                    </div>
+                    <div class="points-box">
+                        <span>🎯 ${lesson.points} pts</span>
+                    </div>
+                `;
+                lessonCard.appendChild(infoRow);
+            }
 
             const buttonGroup = document.createElement('div');
             buttonGroup.classList.add('button-group');
 
             const waygroundButton = document.createElement('button');
-            waygroundButton.textContent = "Play Wayground";
+            waygroundButton.textContent = lesson.type === 'baoboi' ? "Play" : "Play Wayground";
             waygroundButton.classList.add('btn-wayground');
             waygroundButton.onclick = () => window.open(lesson.url, '_blank');
-
-            const ic3Button = document.createElement('button');
-            ic3Button.textContent = "IC3 Review";
-            ic3Button.classList.add('btn-ic3');
-            ic3Button.onclick = () => window.open(lesson.ic3Url, '_blank');
-
             buttonGroup.appendChild(waygroundButton);
-            buttonGroup.appendChild(ic3Button);
 
-            lessonCard.appendChild(titleElement);
-            lessonCard.appendChild(descriptionElement);
-            lessonCard.appendChild(infoRow);
+            if (lesson.type !== 'baoboi') {
+                const ic3Button = document.createElement('button');
+                ic3Button.textContent = "IC3 Review";
+                ic3Button.classList.add('btn-ic3');
+                ic3Button.onclick = () => window.open(lesson.ic3Url, '_blank');
+                buttonGroup.appendChild(ic3Button);
+            }
+
             lessonCard.appendChild(buttonGroup);
 
             const targetContainer = document.querySelector(`#level-${lesson.level + 2} .lesson-container`);
