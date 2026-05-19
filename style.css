@@ -14,6 +14,10 @@
     --radius-lg: 16px;
     --radius-md: 12px;
     
+    --primary-gradient: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    
     --lvl1: #10b981;
     --lvl2: #f59e0b;
     --lvl3: #8b5cf6;
