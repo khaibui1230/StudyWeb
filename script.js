@@ -1,311 +1,159 @@
 const lessonsData = [
     // Spark Level 1 (Khối 3)
-    {
-        title: "Chủ đề 1",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a666192862e7d395b31437/start?preview=true",
-        level: 1,
-        icon: "💡"
-    },
-    {
-        title: "Chủ đề 2",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a5ab48166b91dce189b44c/start?from=admin&preview=true",
-        level: 1,
-        icon: "💡"
-    },
-    {
-        title: "Chủ đề 3",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a5ad461e3967ac09d111c3/start?from=admin&preview=true",
-        level: 1,
-        icon: "💡"
-    },
-    {
-        title: "Chủ đề 4",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a5b7e4cd20db6b47756bcd/start?preview=true",
-        level: 1,
-        icon: "💡"
-    },
-    {
-        title: "Chủ đề 5",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a6463aa4d08de0f68df02b/start?from=admin&preview=true",
-        level: 1,
-        icon: "💡"
-    },
-    {
-        title: "Chủ đề 6",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a665ab2b1fedb9dee23387/start?from=admin&preview=true",
-        level: 1,
-        icon: "💡"
-    },
-    {
-        title: "Bài thi thử - Google Forms",
-        description: "Bài thi Thử- Google Forms Lv 1",
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdyu8SxSx2zZ46N4Z83BqVPswHHaqu6Raf66PVerM_6ah__nQ/viewform",
-        level: 1,
-        icon: "💡"
-    },
+    { title: "Chủ đề 1 - Test 1", description: "Căn Bản Về Công Nghệ", url: "https://wayground.com/join/quiz/69a666192862e7d395b31437/start?preview=true", ic3Url: "https://ic3review.com/", password: "25103001", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 1 - Test 2", description: "Căn Bản Về Công Nghệ", url: "https://wayground.com/join/quiz/69a666192862e7d395b31437/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25103002", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 2 - Test 1", description: "Công Dân Số", url: "https://wayground.com/join/quiz/69a5ad461e3967ac09d111c3/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25103003", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 3 - Test 1", description: "Quản Lí Thông Tin", url: "https://wayground.com/join/quiz/69a5b7e4cd20db6b47756bcd/start?preview=true", ic3Url: "https://ic3review.com/", password: "25103004", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 3 - Test 2", description: "Quản Lí Thông Tin", url: "https://wayground.com/join/quiz/69a6463aa4d08de0f68df02b/start?preview=true", ic3Url: "https://ic3review.com/", password: "25103005", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 4 - Test 1", description: "Sáng Tạo Nội Dung", url: "https://wayground.com/join/quiz/69a6463aa4d08de0f68df02b/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25103006", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 5 - Test 1", description: "Truyền Thông", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25103007", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 5 - Test 2", description: "Truyền Thông", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25103008", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 6 - Test 1", description: "An Toàn Và Bảo Mật", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25103009", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề 6 - Test 2", description: "An Toàn Và Bảo Mật", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25103010", points: "100", level: 1, icon: "💡" },
+    { title: "Chủ đề Mở Rộng", description: "Ôn tập tổng hợp", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25103011", points: "100", level: 1, icon: "💡" },
+
     // Spark Level 2 (Khối 4)
-    {
-        title: "Chủ đề 1",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/699c63dc9058bf7d27811eaf/start?preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 2",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a0057bc9321eaa2825e8ee/start?preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 3",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/699cf78970669402d79ca2ab/start?from=admin&preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 4 Part 1",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69b8cd44b64783e7ac7791a5/start?preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 4 Part 2",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69b966fde942e5dcfec63a98/start?from=admin&preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 5",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69af881039fbcff4f38647bb/start?from=admin&preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 6",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69b975e6546575919f8be1a5/start?from=admin&preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Chủ đề 7",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/699c666b7699644c83fba5de/start?from=admin&preview=true",
-        level: 2,
-        icon: "🚀"
-    },
-    {
-        title: "Bài thi thử - Google Forms",
-        description: "Bài thi Thử- Google Forms Lv 2",
-        url: "https://docs.google.com/forms/d/e/1FAIpQLScORHQ9NTmTIg5J-KBqrfWP78ZGeK-wf8z23NJlAyw-SB7mZw/viewform",
-        level: 2,
-        icon: "🚀"
-    },
+    { title: "CD1 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/699c63dc9058bf7d27811eaf/start?preview=true", ic3Url: "https://ic3review.com/", password: "25104001", points: "100", level: 2, icon: "🚀" },
+    { title: "CD1 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69a0057bc9321eaa2825e8ee/start?preview=true", ic3Url: "https://ic3review.com/", password: "25104002", points: "100", level: 2, icon: "🚀" },
+    { title: "CD2 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/699cf78970669402d79ca2ab/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25104003", points: "100", level: 2, icon: "🚀" },
+    { title: "CD3 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69b8cd44b64783e7ac7791a5/start?preview=true", ic3Url: "https://ic3review.com/", password: "25104004", points: "100", level: 2, icon: "🚀" },
+    { title: "CD3 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69b966fde942e5dcfec63a98/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25104005", points: "100", level: 2, icon: "🚀" },
+    { title: "CD4 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69af881039fbcff4f38647bb/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25104006", points: "100", level: 2, icon: "🚀" },
+    { title: "CD4 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69b975e6546575919f8be1a5/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25104007", points: "100", level: 2, icon: "🚀" },
+    { title: "CD4 - Test 3", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/699c666b7699644c83fba5de/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25104008", points: "100", level: 2, icon: "🚀" },
+    { title: "CD5 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25104009", points: "100", level: 2, icon: "🚀" },
+    { title: "CD5 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25104010", points: "100", level: 2, icon: "🚀" },
+    { title: "CD6 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25104011", points: "100", level: 2, icon: "🚀" },
+    { title: "CD7 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25104012", points: "100", level: 2, icon: "🚀" },
+    { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25104013", points: "100", level: 2, icon: "🚀" },
+
     // Spark Level 3 (Khối 5)
-    {
-        title: "Chủ đề 1",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69cfb160dcf075db42f5a4b7/start?from=admin&preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-    {
-        title: "Chủ đề 2",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69a906522a224d430cba8852/start?preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-    {
-        title: "Chủ đề 3",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69b22da0cc40041db1e2a1e4/start?preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-    {
-        title: "Chủ đề 4",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/6983fdbeb98788693ef466cb/start?preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-    {
-        title: "Chủ đề 5",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69b977f2a019ee714d0dafc6/start?from=admin&preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-    {
-        title: "Chủ đề 6",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69b97be280a23b7c5711654a/start?from=admin&preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-    {
-        title: "Chủ đề 7",
-        description: "Start Playing - Wayground (Formerly Quizizz)",
-        url: "https://wayground.com/join/quiz/69bb683c834492a5a289105e/start?from=admin&preview=true",
-        level: 3,
-        icon: "🌟"
-    },
-        {
-        title: "Test Form",
-        description: "Bài thi Thử- Google Forms",
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSfY5UeR7QMIi3wZ_qW-Nhaloim8VwFZ4Ky6aH0dar8Li46T2Q/viewform",
-        level: 3,
-        icon: "🌟"
-    },
-    // THCS Sample
-    {
-        title: "Toán 6 - Số học",
-        description: "Ôn tập về số tự nhiên và các phép tính",
-        url: "#",
-        level: 6,
-        icon: "🔢"
-    },
-    {
-        title: "Tiếng Anh 6 - Unit 1",
-        description: "My New School - Vocabulary & Grammar",
-        url: "#",
-        level: 6,
-        icon: "🇬🇧"
-    }
+    { title: "CD1 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69cfb160dcf075db42f5a4b7/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25105001", points: "100", level: 3, icon: "🌟" },
+    { title: "CD1 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69a906522a224d430cba8852/start?preview=true", ic3Url: "https://ic3review.com/", password: "25105002", points: "100", level: 3, icon: "🌟" },
+    { title: "CD2 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69b22da0cc40041db1e2a1e4/start?preview=true", ic3Url: "https://ic3review.com/", password: "25105003", points: "100", level: 3, icon: "🌟" },
+    { title: "CD2 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/6983fdbeb98788693ef466cb/start?preview=true", ic3Url: "https://ic3review.com/", password: "25105004", points: "100", level: 3, icon: "🌟" },
+    { title: "CD3 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69b977f2a019ee714d0dafc6/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25105005", points: "100", level: 3, icon: "🌟" },
+    { title: "CD4 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69b97be280a23b7c5711654a/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25105006", points: "100", level: 3, icon: "🌟" },
+    { title: "CD5 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69bb683c834492a5a289105e/start?from=admin&preview=true", ic3Url: "https://ic3review.com/", password: "25105007", points: "100", level: 3, icon: "🌟" },
+    { title: "CD5 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25105008", points: "100", level: 3, icon: "🌟" },
+    { title: "CD6 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25105009", points: "100", level: 3, icon: "🌟" },
+    { title: "CD7 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25105010", points: "100", level: 3, icon: "🌟" },
+    { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.com/", password: "25105011", points: "100", level: 3, icon: "🌟" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Render Lessons
+    // 1. Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+    }
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
+
+    // 2. Tab Navigation
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const categoryContents = document.querySelectorAll('.category-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-target');
+            tabBtns.forEach(b => b.classList.remove('active'));
+            categoryContents.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(target).classList.add('active');
+        });
+    });
+
+    // 3. Render Lessons
     const renderLessons = () => {
         lessonsData.forEach(lesson => {
             const lessonCard = document.createElement('div');
             lessonCard.classList.add('lesson-card');
 
             const titleElement = document.createElement('h3');
-            let classText = "";
-            if (lesson.level === 1) classText = "Lớp 3";
-            else if (lesson.level === 2) classText = "Lớp 4";
-            else if (lesson.level === 3) classText = "Lớp 5";
-            else if (lesson.level === 6) classText = "Lớp 6";
-            else if (lesson.level === 7) classText = "Lớp 7";
-            
-            titleElement.innerHTML = `${lesson.icon} ${classText} - ${lesson.title}`;
+            titleElement.innerHTML = `${lesson.icon} ${lesson.title}`;
 
             const descriptionElement = document.createElement('p');
             descriptionElement.textContent = lesson.description;
 
-            const startButton = document.createElement('button');
-            startButton.classList.add('start-btn');
-            startButton.textContent = "Bắt đầu học";
-            startButton.onclick = () => {
-                window.open(lesson.url, '_blank');
-            };
+            const infoRow = document.createElement('div');
+            infoRow.classList.add('info-row');
+            infoRow.innerHTML = `
+                <div class="password-box">
+                    <span>Mật khẩu:</span>
+                    <strong>${lesson.password}</strong>
+                    <button class="btn-copy-sm" onclick="copyToClipboard('${lesson.password}', this)" title="Copy Password">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    </button>
+                </div>
+                <div class="points-box">
+                    <span>🎯 ${lesson.points} pts</span>
+                </div>
+            `;
+
+            const buttonGroup = document.createElement('div');
+            buttonGroup.classList.add('button-group');
+
+            const waygroundButton = document.createElement('button');
+            waygroundButton.textContent = "Play Wayground";
+            waygroundButton.classList.add('btn-wayground', 'blurred'); // Làm mờ theo yêu cầu
+            waygroundButton.onclick = () => window.open(lesson.ic3Url, '_blank'); // Chuyển link sang IC3 Review
+
+            const ic3Button = document.createElement('button');
+            ic3Button.textContent = "IC3 Review";
+            ic3Button.classList.add('btn-ic3');
+            ic3Button.onclick = () => window.open(lesson.ic3Url, '_blank');
+
+            buttonGroup.appendChild(waygroundButton);
+            buttonGroup.appendChild(ic3Button);
 
             lessonCard.appendChild(titleElement);
             lessonCard.appendChild(descriptionElement);
-            lessonCard.appendChild(startButton);
+            lessonCard.appendChild(infoRow);
+            lessonCard.appendChild(buttonGroup);
 
-            let targetContainer;
-            if (lesson.level === 1) {
-                targetContainer = document.querySelector('#level-3 .lesson-container');
-            } else if (lesson.level === 2) {
-                targetContainer = document.querySelector('#level-4 .lesson-container');
-            } else if (lesson.level === 3) {
-                targetContainer = document.querySelector('#level-5 .lesson-container');
-            } else if (lesson.level === 6) {
-                targetContainer = document.querySelector('#thcs-6 .lesson-container');
-            } else if (lesson.level === 7) {
-                targetContainer = document.querySelector('#thcs-7 .lesson-container');
-            }
-
+            const targetContainer = document.querySelector(`#level-${lesson.level + 2} .lesson-container`);
             if (targetContainer) {
                 targetContainer.appendChild(lessonCard);
             }
         });
     };
 
+    // 4. Copy Function
+    window.copyToClipboard = (text, btn) => {
+        navigator.clipboard.writeText(text).then(() => {
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<span style="font-size: 10px; color: #10b981; font-weight: bold;">Copied!</span>';
+            setTimeout(() => { btn.innerHTML = originalHTML; }, 1500);
+        });
+    };
+
     renderLessons();
 
-    // 2. Tab Switching Logic
-    const tabButtons = document.querySelectorAll('.tab-btn');
-    const categoryContents = document.querySelectorAll('.category-content');
-
-    tabButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-target');
-
-            // Update buttons
-            tabButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            // Update contents
-            categoryContents.forEach(content => {
-                content.classList.remove('active');
-                if (content.id === targetId) {
-                    content.classList.add('active');
-                }
-            });
-        });
-    });
-
-    // 3. Accordion Logic
+    // 5. Accordion Logic
     const levelHeaders = document.querySelectorAll('.level-header');
-
     levelHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const parentSection = header.closest('.level-section');
             const content = parentSection.querySelector('.level-content');
-
-            // Close all other open sections in the SAME category
-            const currentCategory = parentSection.closest('.category-content');
-            currentCategory.querySelectorAll('.level-section.active').forEach(openSection => {
-                if (openSection !== parentSection) {
-                    openSection.classList.remove('active');
-                    openSection.querySelector('.level-content').style.maxHeight = null;
-                }
+            const isActive = parentSection.classList.contains('active');
+            
+            document.querySelectorAll('.level-section').forEach(s => {
+                s.classList.remove('active');
+                s.querySelector('.level-content').style.maxHeight = null;
             });
 
-            // Toggle the clicked section
-            const isActive = parentSection.classList.toggle('active');
-
-            if (isActive) {
-                // Re-calculate height to be sure (especially for dynamic content)
+            if (!isActive) {
+                parentSection.classList.add('active');
                 content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = null;
             }
         });
     });
 
-    // 4. Night Mode Logic
-    const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme');
-
-    if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
-    }
-
-    themeToggle.addEventListener('click', () => {
-        let theme = document.documentElement.getAttribute('data-theme');
-        if (theme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-        } else {
-            document.documentElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark');
-        }
-    });
+    if (levelHeaders.length > 0) levelHeaders[0].click();
 });
