@@ -939,24 +939,6 @@ body {
     border: none !important;
 }
 
-.btn-wayground.blurred {
-    filter: blur(2px);
-    opacity: 0.6;
-    position: relative;
-    cursor: pointer;
-}
-
-.btn-wayground.blurred::after {
-    content: "🔒";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2rem;
-    filter: none;
-    opacity: 1;
-}
-
 .btn-ic3 {
     background: white !important;
     color: var(--text-main) !important;
