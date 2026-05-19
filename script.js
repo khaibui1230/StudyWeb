@@ -11,7 +11,7 @@ const lessonsData = [
     { title: "Chủ đề 6 - Test 1", description: "An Toàn Và Bảo Mật", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL1/GS6SparkL1-CD6-T1%20(Published)/index.html", password: "31025003", points: "100", level: 1, icon: "💡" },
     { title: "Chủ đề 6 - Test 2", description: "An Toàn Và Bảo Mật", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL1/GS6SparkL1-CD6-T2%20(Published)/index.html", password: "31025002", points: "100", level: 1, icon: "💡" },
     { title: "Chủ đề Mở Rộng", description: "Ôn tập tổng hợp", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL1/GS6SparkL1-CDMR%20(Published)/index.html", password: "31025001", points: "100", level: 1, icon: "💡" },
-    { title: "Bảo bối Spark 1", description: "Công cụ hỗ trợ học tập", url: "https://wayground.com/", level: 1, icon: "💎", type: "baoboi" },
+    { title: "Bảo bối Spark 1", description: "Đề thi Spark 1", url: "https://docs.google.com/forms/d/e/1FAIpQLSdAt1Sao-69Dgwz96dHD2yFSbR66KBTLl1L1Ahkbb4sD2fLrA/viewform?usp=dialog", level: 1, icon: "💎", type: "baoboi" },
 
     // Spark Level 2 (Khối 4)
     { title: "CD1 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/699c63dc9058bf7d27811eaf/start?preview=true", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD1-T1%20(Published)/index.html", password: "41025013", points: "100", level: 2, icon: "🚀" },
@@ -27,7 +27,7 @@ const lessonsData = [
     { title: "CD6 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD6-T1%20(Published)/index.html", password: "41025003", points: "100", level: 2, icon: "🚀" },
     { title: "CD7 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD7-T1%20(Published)/index.html", password: "41025002", points: "100", level: 2, icon: "🚀" },
     { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL2/GS6SparkL2-CD7-T2%20(Published)/index.html", password: "41025001", points: "100", level: 2, icon: "🚀" },
-    { title: "Bảo bối Spark 2", description: "Công cụ hỗ trợ học tập", url: "https://wayground.com/", level: 2, icon: "💎", type: "baoboi" },
+    { title: "Bảo bối Spark 2", description: "Đề thi Spark 2", url: "https://docs.google.com/forms/d/e/1FAIpQLScA2eZ22d2eCEN4QSF-uMomOLxtMpW_xg9Hr54iSuzMp_m6Zg/viewform?usp=dialog", level: 2, icon: "💎", type: "baoboi" },
 
     // Spark Level 3 (Khối 5)
     { title: "CD1 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/join/quiz/69cfb160dcf075db42f5a4b7/start?from=admin&preview=true", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD1-T1%20(Published)/index.html", password: "68759341", points: "100", level: 3, icon: "🌟" },
@@ -41,7 +41,7 @@ const lessonsData = [
     { title: "CD6 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD6-T1%20(Published)/index.html", password: "51025003", points: "100", level: 3, icon: "🌟" },
     { title: "CD7 - Test 1", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD7-T1%20(Published)/index.html", password: "51025002", points: "100", level: 3, icon: "🌟" },
     { title: "CD7 - Test 2", description: "Wayground & IC3 Review", url: "https://wayground.com/", ic3Url: "https://ic3review.iigvietnam.edu.vn/newdata/GS6SparkL3/GS6SparkL3-CD7-T2%20(Published)/index.html", password: "51025001", points: "100", level: 3, icon: "🌟" },
-    { title: "Bảo bối Spark 3", description: "Công cụ hỗ trợ học tập", url: "https://wayground.com/", level: 3, icon: "💎", type: "baoboi" }
+    { title: "Bảo bối Spark 3", description: "Đề thi Spark 3", url: "https://docs.google.com/forms/d/e/1FAIpQLScA2eZ22d2eCEN4QSF-uMomOLxtMpW_xg9Hr54iSuzMp_m6Zg/viewform?usp=dialog", level: 3, icon: "💎", type: "baoboi" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
